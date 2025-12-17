@@ -130,10 +130,6 @@ const MenuItemCard: React.FC<MenuItemProps> = ({ name, price, description, image
         <p className="text-muted-foreground text-sm flex-grow mb-6 line-clamp-3">
           {description}
         </p>
-        <button className="w-full py-3 bg-muted text-foreground font-medium rounded-xl hover:bg-primary hover:text-primary-foreground transition-colors flex items-center justify-center gap-2">
-          <ShoppingBag size={18} />
-          Add to Cart
-        </button>
       </div>
     </div>
   );

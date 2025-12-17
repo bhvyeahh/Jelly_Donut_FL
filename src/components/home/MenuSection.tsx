@@ -81,9 +81,6 @@ export function MenuSection() {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
                   {item.description}
                 </p>
-                <Button variant="outline" className="w-full rounded-full border-primary/20 hover:bg-primary hover:text-white hover:border-primary transition-colors">
-                  Add to Cart
-                </Button>
               </div>
             </div>
           ))}
