@@ -1,0 +1,114 @@
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/600.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/geist-sans/400.css';
+@import '@fontsource/geist-sans/500.css';
+@import '@fontsource/geist-sans/600.css';
+@import '@fontsource/geist-mono/400.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Custom Palette for The Jelly Donuts */
+    --background: 350 100% 97%;
+    --foreground: 301 90% 16%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 301 90% 16%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 301 90% 16%;
+    
+    --primary: 330 81% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 48 96% 77%;
+    --secondary-foreground: 22 78% 26%;
+    
+    --muted: 330 67% 97%;
+    --muted-foreground: 333 71% 51%;
+    
+    --accent: 328 86% 70%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 327 73% 89%;
+    --input: 327 73% 89%;
+    --ring: 330 81% 60%;
+    
+    --radius: 1rem;
+    
+    /* Fonts */
+    --font-sans: 'Geist Sans', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    --font-mono: 'Geist Mono', monospace;
+    
+    /* Misc */
+    --tracking-normal: 0em;
+
+    /* Custom Gradients & Shadows */
+    --gradient-hero: linear-gradient(135deg, hsl(330 81% 60%), hsl(48 96% 77%));
+    --shadow-soft: 0 10px 40px -10px rgba(236, 72, 153, 0.2);
+  }
+
+  .dark {
+    --background: 301 90% 16%;
+    --foreground: 350 100% 97%;
+    
+    --card: 301 80% 12%;
+    --card-foreground: 350 100% 97%;
+    
+    --popover: 301 80% 12%;
+    --popover-foreground: 350 100% 97%;
+    
+    --primary: 330 81% 60%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 48 96% 77%;
+    --secondary-foreground: 22 78% 26%;
+    
+    --muted: 301 70% 20%;
+    --muted-foreground: 327 73% 89%;
+    
+    --accent: 328 86% 70%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 301 70% 25%;
+    --input: 301 70% 25%;
+    --ring: 330 81% 60%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    letter-spacing: var(--tracking-normal);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
